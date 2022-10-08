@@ -8,7 +8,7 @@ public class CourseManager {
     private Logger [] loggers;
     private CourseDao courseDao;
 
-    public CourseManager(Logger[] loggers, CourseDao courseDao) {
+    public CourseManager( CourseDao courseDao, Logger[] loggers) {
         this.loggers = loggers;
         this.courseDao = courseDao;
     }
