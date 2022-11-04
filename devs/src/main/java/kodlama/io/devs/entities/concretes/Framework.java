@@ -12,9 +12,9 @@ import javax.validation.constraints.NotNull;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "languages")
+@Table(name = "frameworks")
 @Entity
-public class Language {
+public class Framework {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -22,4 +22,8 @@ public class Language {
 
     @Column(name = "name", nullable = false)
     private String name;
+
+    @ManyToOne
+    @JoinColumn(name ="language_id", nullable = false)
+    private Language language;
 }
